@@ -1,0 +1,37 @@
+.icon--tick__circle {
+  stroke: map-get($theme-colors, info);
+  fill: $card-bg;
+
+  &.selected {
+    stroke: none;
+    fill: $card-bg;
+  }
+}
+
+.icon--tick__shape {
+  stroke: black;
+  fill: none;
+}
+
+.info-icon {
+  height: 65px;
+
+  margin-top: map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 2);
+
+  path {
+    fill: $card-bg;
+  }
+}
+
+.icon-path--start {
+  stroke: $body-color;
+}
+
+.btn-dark .icon-path--start {
+  stroke: #fff;
+}
+
+.btn-light .icon-path--start {
+  stroke: #000;
+}

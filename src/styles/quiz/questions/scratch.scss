@@ -1,0 +1,71 @@
+.scratch {
+  .card-wrapper {
+    background-color: transparent !important;
+  }
+  .card-body {
+    display: flex;
+    margin-top: -50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.interaction--type-scratcher {
+  position: relative;
+  height: 100%;
+  max-width: 300px;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+  overflow: hidden;
+  margin: 0 auto;
+  .scratch__finger {
+    position: absolute;
+
+    top: 25%;
+    left: 25%;
+
+    height: 25%;
+
+    z-index: 1000;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .scratch__canvas, .confetti__canvas {
+    position: absolute;
+    z-index: 500;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+
+  .confetti__canvas {
+    z-index: 499;
+  }
+
+  .scratch__image {
+    position: relative;
+
+    max-height: 100%;
+    max-width: 100%;
+
+    z-index: 250;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .scratch__image, .scratch__canvas, .confetti__canvas {
+    max-height: 60%;
+    top: 15%;
+    @include media-breakpoint-up(sm) {
+      top: 20%;
+    }
+  }
+}

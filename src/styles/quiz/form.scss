@@ -1,0 +1,106 @@
+.page--enter {
+  .page__card {
+    display: grid;
+
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .card-title {
+    font-size: 1em;
+    @include media-breakpoint-up(sm) {
+      font-size: 1.2em;
+    }
+  }
+
+  .card-body--form {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+
+.form-group--enter-form {
+  text-align: left;
+  margin-bottom: 0.4rem;
+  position: relative;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 1.2rem;
+  }
+
+  &.custom-switch {
+    min-height: 1.8rem;
+    margin-top: map-get($spacers, 2);
+    margin-bottom: map-get($spacers, 2);
+    // margin for terms and conditions
+    &:nth-last-of-type(2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.label--enter-form {
+  font-size: $small-font-size;
+
+  &.label--input {
+    color: $text-muted;
+    text-transform: uppercase;
+
+    margin-bottom: 0;
+  }
+}
+
+.input--enter-form.form-control {
+  padding: 0;
+
+  border: none;
+  border-bottom: 2px solid $card-color;
+  border-radius: 0;
+
+  background-color: $card-bg;
+
+  &.is-invalid {
+    background-position: center right;
+  }
+}
+
+.feedback--enter-form.invalid-feedback {
+  position: absolute;
+  text-align: right;
+}
+
+.nav-btn--enter {
+  .entering {
+    .button-text {
+      margin-right: map-get($spacers, 2);
+    }
+  }
+}
+
+.custom-switch {
+  .custom-control-label {
+    &::after {
+      background-color: $custom-control-indicator-border-color;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $custom-control-indicator-border-color;
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-border-color;
+    }
+  }
+
+  .invalid-feedback {
+    position: absolute;
+    text-align: right;
+    width: 32%;
+    right: 0;
+    top: -4px;
+  }
+}

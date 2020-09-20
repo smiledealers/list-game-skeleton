@@ -1,0 +1,22 @@
+$background-image-url: null;
+
+// Framework settings
+@import './quiz/_settings';
+// Framework styles
+@import 'bootstrap/scss/bootstrap';
+
+@import './quiz/utilities/utilities';
+@import './quiz/variables';
+
+@import './quiz/general';
+@import './quiz/buttons';
+@import './quiz/cards';
+@import './quiz/carousel';
+@import './quiz/form';
+@import './quiz/how_to_play';
+@import './quiz/icons';
+@import './quiz/loading';
+@import './quiz/pages';
+@import './quiz/questions';
+@import './quiz/results';
+@import './quiz/text';

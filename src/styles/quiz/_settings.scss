@@ -1,0 +1,53 @@
+$header-ratio: 37;
+
+$btn-border-radius: 15px;
+$btn-padding-y: 0.75em;
+
+$card-radius: 28px;
+$card-border-radius: $card-radius $card-radius $card-radius $card-radius;
+$card-box-shadow: 0 24px 40px rgba(29, 30, 39, 0.1);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+);
+
+$custom-control-indicator-bg: rgba(154, 168, 182, 0.5);
+$custom-control-indicator-border-width: 3px;
+$custom-control-indicator-size: 1.6rem;
+
+// $custom-switch-indicator-border-radius: 20px;
+$custom-switch-width: $custom-control-indicator-size * 1.5;
+
+$font-family-base: 'Poppins', sans-serif;
+$font-size-base: 0.8rem;
+$font-weight-bold: 600;
+
+$modal-content-color: black;
+
+$spacer: 1rem;
+
+$spacers: (
+  6: (
+    $spacer * 6,
+  ),
+  7: (
+    $spacer * 7,
+  ),
+);
+
+$theme-colors: (
+  'facebook': #3b5999,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 960px,
+  xl: 1200px,
+);
+
+// override tachyons off white
+.bg-off-white { background-color: #F8FAFC !important; }

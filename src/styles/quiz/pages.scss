@@ -1,0 +1,127 @@
+.container--quiz {
+  max-width: $width-md;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 1em;
+
+  img {
+    justify-self: center;
+    object-fit: contain;
+  }
+
+}
+
+.page--results {
+  grid-auto-rows: min-content;
+
+  grid-row-gap: 3em;
+  row-gap: 2em;
+  height: 100%;
+
+  overflow-y: auto;
+  justify-items: center;
+  padding: 1em;
+
+  .page__header-image,
+  .header--answers-title,
+  .carousel--answers,
+  .page__nav--share {
+    width: 100%;
+  }
+}
+
+.page--card {
+  @include media-breakpoint-up(md) {
+    align-content: start;
+  }
+  height: 100%;
+}
+
+.page__card {
+  height: 100%;
+}
+
+.page__header {
+  max-height: 20%;
+  max-width: $width-md;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+
+.page__header-image {
+  @include media-breakpoint-up(sm) {
+    padding: 0 1em 0em;
+  }
+}
+
+.card__header {
+  img {
+    max-width: 100%;
+  }
+}
+
+.page--splash {
+  height: calc(100vh - 60px);
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 4em);
+  }
+
+  .prize__image {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    img {
+      position: absolute;
+      height: 100%;
+    }
+  }
+  .page__nav {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.page__nav.page__nav--share {
+  max-width: 100%;
+  @include media-breakpoint-up(md) {
+    width: calc(100% - 4em);
+    max-width: $width-lg;
+  }
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.page--how-to-play {
+  grid-template-rows: auto 1fr auto;
+}
+
+.page--enter {
+  grid-template-rows: 1fr min-content;
+
+  .page__header {
+    margin-top: -$card-spacer-x;
+    margin-left: -$card-spacer-x;
+    margin-right: -$card-spacer-x;
+  }
+}
+
+.page--question {
+
+  .page__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,50 @@
+// General widths
+.page--question {
+  .card__title {
+
+  }
+
+  .page__card > .card-body {
+    width: 100%;
+
+    padding: 0 $card-spacer-x;
+
+    @include media-breakpoint-up(sm) {
+      width: 75%;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 60%;
+    }
+  }
+
+  .card--trivia {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    font-size: 0.9em;
+    padding: 0;
+    @include media-breakpoint-up(sm) {
+      font-size: 1.1em;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 1.2em;
+      padding: 0 $card-spacer-x;
+    }
+
+    font-weight: 600;
+    line-height: 200%;
+
+    text-align: center;
+  }
+}
+
+@import './questions/basic_question';
+@import './questions/categories';
+@import './questions/disappearing_image';
+@import './questions/option_sets';
+@import './questions/scratch';
+@import './questions/list_game';
+@import './questions/interactive';

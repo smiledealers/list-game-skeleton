@@ -1,0 +1,93 @@
+@if $background-image-url {
+  body {
+    background-image: url($background-image-url);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+nav,
+figure,
+header,
+section {
+  text-align: center;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  > * {
+    position: absolute;
+    &.results--page {
+      padding-bottom: 4.5rem;
+      position: static;
+    }
+    @include media-breakpoint-up(sm) {
+      padding: 1rem;
+      &.results--page {
+        padding-bottom: 4.5rem;
+      }
+    }
+  }
+}
+
+.container--quiz {
+
+}
+
+.header--image {
+  max-height: 200px;
+}
+
+.img-fluid--vertical {
+}
+
+.page__nav,
+.card__nav,
+.page__share {
+  @include media-breakpoint-down(sm) {
+
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.nav-span--split {
+  @include media-breakpoint-down(sm) {
+    min-width: 10em;
+  }
+}
+
+.nav-btn {
+  height: 2.5rem;
+}
+.scroll-port {
+  overflow-y: auto;
+}
+
+.progress {
+  height: 20px;
+  width: 100%;
+
+  background-color: $card-bg;
+
+  border-radius: 9px;
+  border: 4px solid rgba(map-get($theme-colors, info), 0.06);
+}
+
+.progress-bar {
+  border-radius: 9px;
+}
